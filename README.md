@@ -1,2 +1,2 @@
 # Portfolio
-DEtails about me.
+Details about me.
