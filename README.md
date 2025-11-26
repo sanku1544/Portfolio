@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Krishna Patil - Portfolio Website
+# Sanket Nikam - Portfolio Website
 
 A modern, full-stack portfolio website built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring a powerful admin dashboard for content management.
 
@@ -94,8 +94,8 @@ The application will be available at `http://localhost:5173`
 ## 🔐 Admin Access
 
 Default admin credentials (change these after first login):
-- **Username**: admin
-- **Password**: admin123
+- **Username**: ******
+- **Password**: *****
 
 Access the admin dashboard at: `http://localhost:5173/admin`
 
