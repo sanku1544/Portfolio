@@ -28,7 +28,7 @@ const seedData = async () => {
     const infoExists = await GeneralInfo.findOne();
     if (!infoExists) {
       await GeneralInfo.create({
-        name: 'Krishna Patil',
+        name: 'Sanket Patil',
         role: 'MERN Stack Developer',
         aboutDescription: 'Passionate developer...',
         githubUrl: 'https://github.com',
