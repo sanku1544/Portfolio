@@ -11,7 +11,7 @@
    - `MONGO_URI`: Your MongoDB Atlas connection string.
    - `JWT_SECRET`: A strong secret.
    - `PORT`: 5000 (or default)
-
+ 
 ## Frontend (Vercel/Netlify)
 1. Create a new project on Vercel/Netlify.
 2. Connect your repository.
