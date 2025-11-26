@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Krishna Patil - Portfolio Website
 
 A modern, full-stack portfolio website built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring a powerful admin dashboard for content management.
@@ -205,3 +206,7 @@ Give a ⭐️ if you like this project!
 
 
 <!-- admin  password123 -->
+=======
+# Portfolio
+Details about me.
+>>>>>>> 669964c9e7c0a4046a7b0fb93b18e66eabe86f5d
