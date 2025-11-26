@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Krishna Patil - Portfolio Website
+# Sanket Patil - Portfolio Website
 
 A modern, full-stack portfolio website built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring a powerful admin dashboard for content management.
 
@@ -39,7 +39,7 @@ A modern, full-stack portfolio website built with the MERN stack (MongoDB, Expre
 - Multer (file uploads)
 - CORS
 
-## 📦 Installation
+## 📦 Installation  
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -48,8 +48,8 @@ A modern, full-stack portfolio website built with the MERN stack (MongoDB, Expre
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/sanku1544/portfolio-krishna.git
-cd portfolio-krishna
+git clone https://github.com/sanku1544/portfolio-Sanket.git
+cd portfolio-Sanket
 ```
 
 ### Backend Setup
@@ -196,7 +196,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👤 Author
 
-**Krishna Patil**
+**Sanket Patil**
 - GitHub: [@sanku1544](https://github.com/sanku1544)
 - Portfolio: [Your deployed URL]
 

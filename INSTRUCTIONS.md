@@ -15,7 +15,7 @@ This project is a MERN stack application.
     ```
     Create a `.env` file in `server/` with:
     ```
-    MONGO_URI=mongodb://localhost:27017/portfolio_krishna
+    MONGO_URI=mongodb://localhost:27017/portfolio_Sanket
     PORT=5000
     JWT_SECRET=your_secret_key
     ```
