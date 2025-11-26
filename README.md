@@ -48,8 +48,8 @@ A modern, full-stack portfolio website built with the MERN stack (MongoDB, Expre
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/sanku1544/portfolio-krishna.git
-cd portfolio-krishna
+git clone https://github.com/sanku1544/portfolio-sanket.git
+cd portfolio-sanket
 ```
 
 ### Backend Setup
