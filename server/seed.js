@@ -5,8 +5,8 @@ import GeneralInfo from './models/GeneralInfo.js';
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portfolio_krishna')
-  .then(() => console.log('MongoDB Connected'))
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {console.log('MongoDB Connected'); console.log(process.env.MONGO_URI);})
   .catch(err => console.error(err));
 
 const seedData = async () => {

@@ -152,7 +152,7 @@ const Hero = () => {
             
             <div className="absolute inset-10 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-900">
               <img 
-                src={data?.heroImage || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80"} 
+                src={data?.heroImage || "https://res.cloudinary.com/dkv2hkjzr/image/upload/v1764158791/portfolio_krishna/cfoezwcj7kezej3k8ouw.jpg"} 
                 alt="Profile" 
                 className="w-full h-full object-cover" 
               />
