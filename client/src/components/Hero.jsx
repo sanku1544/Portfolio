@@ -58,7 +58,7 @@ const Hero = () => {
   }));
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300 ">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {floatingShapes.map((shape, i) => (
@@ -85,7 +85,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-20 px-6 relative z-10 flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

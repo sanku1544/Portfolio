@@ -7,6 +7,7 @@ import ExperienceTab from '../components/admin/ExperienceTab';
 import SkillsTab from '../components/admin/SkillsTab';
 import MessagesTab from '../components/admin/MessagesTab';
 import CertificationsTab from '../components/admin/CertificationsTab';
+import EducationTab from '../components/admin/EducationTab';
 import { motion } from 'framer-motion';
 
 import axios from 'axios';
@@ -106,6 +107,7 @@ const AdminDashboard = () => {
           { id: 'projects', label: 'Projects' },
           { id: 'certifications', label: 'Certifications' },
           { id: 'experience', label: 'Experience' },
+          { id: 'education', label: 'Education' },
           { id: 'skills', label: 'Skills' },
           { id: 'messages', label: 'Messages' }
         ].map(tab => (
@@ -129,6 +131,7 @@ const AdminDashboard = () => {
         {activeTab === 'projects' && <ProjectsTab />}
         {activeTab === 'certifications' && <CertificationsTab />}
         {activeTab === 'experience' && <ExperienceTab />}
+        {activeTab === 'education' && <EducationTab />}
         {activeTab === 'skills' && <SkillsTab />}
         {activeTab === 'messages' && <MessagesTab />}
       </div>
