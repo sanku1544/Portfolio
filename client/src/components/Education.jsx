@@ -32,14 +32,14 @@ const Education = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-dark p-6 rounded-xl shadow-lg border-l-4 border-green-500"
+              className="bg-white dark:bg-dark p-6 rounded-xl shadow-lg border-l-4 border-blue-500"
             >
               <div className="flex flex-col md:flex-row justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {edu.degree}
                   </h3>
-                  <p className="text-green-600 font-medium">
+                  <p className="text-blue-600 font-medium">
                     {edu.institution}
                   </p>
                 </div>
