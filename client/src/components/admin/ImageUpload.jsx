@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
+import api from '../../api/axios';
 
 const ImageUpload = ({ onUpload, currentImage, label }) => {
   const [uploading, setUploading] = useState(false);
@@ -28,7 +29,7 @@ const ImageUpload = ({ onUpload, currentImage, label }) => {
     formData.append('image', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', formData, {
+      const res = await api.post('/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
+import api from '../../api/axios';
 
 const SkillsTab = () => {
   const { user } = useContext(AuthContext);
@@ -22,7 +23,7 @@ const SkillsTab = () => {
 
   const fetchSkills = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/skills');
+      const res = await api.get('/portfolio/skills');
       setSkills(res.data);
     } catch (error) {
       console.error(error);
@@ -32,7 +33,7 @@ const SkillsTab = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this skill?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/portfolio/skills/${id}`, {
+        await api.delete(`/portfolio/skills/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         fetchSkills();
@@ -62,9 +63,9 @@ const SkillsTab = () => {
       };
 
       if (currentSkill) {
-        await axios.put(`http://localhost:5000/api/portfolio/skills/${currentSkill._id}`, formData, config);
+        await api.put(`/portfolio/skills/${currentSkill._id}`, formData, config);
       } else {
-        await axios.post('http://localhost:5000/api/portfolio/skills', formData, config);
+        await api.post('/portfolio/skills', formData, config);
       }
       setIsEditing(false);
       fetchSkills();

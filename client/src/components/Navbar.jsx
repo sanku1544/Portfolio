@@ -19,7 +19,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full p-4 flex justify-between items-center bg-white/80 dark:bg-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
+      className="fixed top-0 w-full  p-4 flex justify-between items-center bg-white/80 dark:bg-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
     >
       <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent z-50">
         Sanket Nikam

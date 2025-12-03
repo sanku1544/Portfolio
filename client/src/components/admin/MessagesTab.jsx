@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { FaTrash, FaEnvelope } from 'react-icons/fa';
+import api from '../../api/axios';
 
 const MessagesTab = () => {
   const { user } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const MessagesTab = () => {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/messages', {
+      const res = await api.get('/portfolio/messages', {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       setMessages(res.data);

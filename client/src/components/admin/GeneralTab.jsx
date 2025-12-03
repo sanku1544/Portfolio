@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import ImageUpload from './ImageUpload';
+import api from '../../api/axios';
 
 const GeneralTab = () => {
   const { user } = useContext(AuthContext);
@@ -28,7 +29,7 @@ const GeneralTab = () => {
 
   const fetchGeneralInfo = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/general');
+      const res = await api.get('/portfolio/general');
       if (res.data) setFormData(res.data);
     } catch (error) {
       console.error(error);
@@ -46,7 +47,7 @@ const GeneralTab = () => {
       const config = {
         headers: { Authorization: `Bearer ${user.token}` }
       };
-      await axios.put('http://localhost:5000/api/portfolio/general', formData, config);
+      await api.put('/portfolio/general', formData, config);
       setMsg('Profile updated successfully!');
       setTimeout(() => setMsg(''), 3000);
     } catch (error) {

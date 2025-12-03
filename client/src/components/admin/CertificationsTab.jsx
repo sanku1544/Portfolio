@@ -3,6 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
 import ImageUpload from './ImageUpload';
+import api from '../../api/axios';
 
 const CertificationsTab = () => {
   const { user } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const CertificationsTab = () => {
 
   const fetchCerts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/certifications');
+      const res = await api.get('/portfolio/certifications');
       setCerts(res.data);
     } catch (error) {
       console.error(error);

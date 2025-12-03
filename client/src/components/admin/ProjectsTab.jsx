@@ -3,6 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
 import ImageUpload from './ImageUpload';
+import api from '../../api/axios';
 
 const ProjectsTab = () => {
   const { user } = useContext(AuthContext);
@@ -25,8 +26,8 @@ const ProjectsTab = () => {
   }, []);
 
   const fetchProjects = async () => {
-    try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/projects');
+      try {
+        const res = await api.get('/portfolio/projects');
       setProjects(res.data);
     } catch (error) {
       console.error(error);
@@ -36,7 +37,7 @@ const ProjectsTab = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this project?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/portfolio/projects/${id}`, {
+        await api.delete(`/portfolio/projects/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         fetchProjects();

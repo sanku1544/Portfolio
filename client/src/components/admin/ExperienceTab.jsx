@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
+import api from '../../api/axios';
 
 const ExperienceTab = () => {
   const { user } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const ExperienceTab = () => {
 
   const fetchExperiences = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/portfolio/experience');
+      const res = await api.get('/portfolio/experience');
       setExperiences(res.data);
     } catch (error) {
       console.error(error);
@@ -35,7 +36,7 @@ const ExperienceTab = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this experience?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/portfolio/experience/${id}`, {
+        await api.delete(`/portfolio/experience/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         fetchExperiences();
@@ -73,9 +74,9 @@ const ExperienceTab = () => {
       };
 
       if (currentExp) {
-        await axios.put(`http://localhost:5000/api/portfolio/experience/${currentExp._id}`, dataToSend, config);
+        await api.put(`/portfolio/experience/${currentExp._id}`, dataToSend, config);
       } else {
-        await axios.post('http://localhost:5000/api/portfolio/experience', dataToSend, config);
+        await api.post('/portfolio/experience', dataToSend, config);
       }
       setIsEditing(false);
       fetchExperiences();

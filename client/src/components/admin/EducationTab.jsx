@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
+import api from '../../api/axios';
 
 const EducationTab = () => {
   const { user } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const EducationTab = () => {
 
   const fetchEducation = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/portfolio/education");
+      const res = await api.get('/portfolio/education');
       setEducation(res.data);
     } catch (error) {
       console.error(error);
@@ -35,7 +36,7 @@ const EducationTab = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this education record?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/portfolio/education/${id}`, {
+        await api.delete(`/portfolio/education/${id}`, {
           headers: { Authorization: `Bearer ${user.token}` },
         });
         fetchEducation();
@@ -63,13 +64,9 @@ const EducationTab = () => {
 
     try {
       if (currentEdu) {
-        await axios.put(
-          `http://localhost:5000/api/portfolio/education/${currentEdu._id}`,
-          formData,
-          config
-        );
+        await api.put(`/portfolio/education/${currentEdu._id}`, formData, config);
       } else {
-        await axios.post("http://localhost:5000/api/portfolio/education", formData, config);
+        await api.post('/portfolio/education', formData, config);
       }
       setIsEditing(false);
       fetchEducation();
