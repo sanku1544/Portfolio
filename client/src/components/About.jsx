@@ -48,12 +48,12 @@ const About = () => {
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">About Me</h2>
         
-        <div className="flex flex-col md:flex-row gap-36 items-center">
-          <div className="md:w-1/2">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+          <div className="md:w-1/2 w-full">
             <img 
               src={data?.aboutImage || "https://via.placeholder.com/500"} 
               alt="About" 
-              className="rounded-2xl shadow-2xl w-full object-cover h-[400px]"
+              className="rounded-2xl shadow-2xl w-full object-cover h-64 sm:h-80 md:h-[400px]"
             />
           </div>
           

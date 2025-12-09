@@ -58,7 +58,7 @@ const Hero = () => {
   }));
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300 ">
+    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300 pt-20 md:pt-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {floatingShapes.map((shape, i) => (
@@ -85,8 +85,8 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-20 px-6 relative z-10 flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
+        <div className="md:w-1/2 text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -95,13 +95,13 @@ const Hero = () => {
             <span className="inline-block py-1 px-3 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-semibold mb-4 border border-blue-200 dark:border-blue-800">
               Available for Hire
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight dark:text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight dark:text-white">
               Building <br />
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Digital Experiences
               </span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
               I'm {data?.name || 'Sanket Nikam'}, a {data?.role || 'Full Stack Developer'} crafting beautiful, high-performance web applications with modern technologies.
             </p>
             
@@ -136,9 +136,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="md:w-1/2 flex justify-center relative"
+          className="md:w-1/2 flex justify-center relative w-full"
         >
-          <div className="relative w-80 h-80 md:w-[500px] md:h-[500px]">
+          <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px]">
             <motion.div 
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -158,11 +158,11 @@ const Hero = () => {
               />
             </div>
 
-            {/* Floating Cards */}
+            {/* Floating Cards - Hidden on very small screens, adjusted for others */}
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="absolute top-10 -right-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
+              className="hidden sm:block absolute top-0 sm:top-10 right-0 sm:-right-4 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-blue-600">
@@ -178,7 +178,7 @@ const Hero = () => {
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, delay: 1 }}
-              className="absolute bottom-20 -left-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
+              className="hidden sm:block absolute bottom-10 sm:bottom-20 left-0 sm:-left-4 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-lg text-green-600">
@@ -197,7 +197,7 @@ const Hero = () => {
       <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-600"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-600 hidden md:block"
       >
         <FaArrowDown />
       </motion.div>

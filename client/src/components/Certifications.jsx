@@ -52,7 +52,7 @@ const Certifications = () => {
         <div className="relative mt-8">
           <button
             onClick={() => scroll(-1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             aria-label="Scroll left"
           >
             <FiChevronLeft className="w-6 h-6" />
@@ -60,7 +60,7 @@ const Certifications = () => {
 
           <button
             onClick={() => scroll(1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             aria-label="Scroll right"
           >
             <FiChevronRight className="w-6 h-6" />
