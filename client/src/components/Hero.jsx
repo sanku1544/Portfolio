@@ -58,7 +58,7 @@ const Hero = () => {
   }));
 
   return (
-    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300 pt-20 md:pt-0">
+    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-dark transition-colors duration-300 pt-20 pb-24 md:pt-0 md:pb-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {floatingShapes.map((shape, i) => (
