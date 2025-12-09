@@ -52,7 +52,7 @@ const Projects = () => {
                     <FaGithub /> GitHub
                   </a>
                   <a href={project.liveLink} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium hover:text-blue-500 transition-colors">
-                    <FaExternalLinkAlt /> Live Demo
+                    {/* <FaExternalLinkAlt /> Live Demo */}
                   </a>
                 </div>
               </div>
