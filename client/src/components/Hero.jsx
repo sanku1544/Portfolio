@@ -158,19 +158,19 @@ const Hero = () => {
               />
             </div>
 
-            {/* Floating Cards - Hidden on very small screens, adjusted for others */}
+            {/* Floating Cards - Visible on all screens */}
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="hidden sm:block absolute top-0 sm:top-10 right-0 sm:-right-4 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
+              className="absolute -top-4 -right-2 sm:top-10 sm:-right-4 bg-white dark:bg-gray-800 p-2 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
             >
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-blue-600">
-                  <FaGithub className="text-xl" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="p-1.5 sm:p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-blue-600">
+                  <FaGithub className="text-lg sm:text-xl" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Public Repos</p>
-                  <p className="font-bold dark:text-white">{formatCount(githubRepos)}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">Public Repos</p>
+                  <p className="text-sm sm:text-base font-bold dark:text-white">{formatCount(githubRepos)}</p>
                 </div>
               </div>
             </motion.div>
@@ -178,15 +178,15 @@ const Hero = () => {
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, delay: 1 }}
-              className="hidden sm:block absolute bottom-10 sm:bottom-20 left-0 sm:-left-4 bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
+              className="absolute -bottom-4 -left-2 sm:bottom-20 sm:-left-4 bg-white dark:bg-gray-800 p-2 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 z-20"
             >
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-lg text-green-600">
-                  <span className="text-xl">💻</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="p-1.5 sm:p-2 bg-green-100 dark:bg-green-900/50 rounded-lg text-green-600">
+                  <span className="text-lg sm:text-xl">💻</span>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Projects</p>
-                  <p className="font-bold dark:text-white">{formatCount(projectsCount)}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">Projects</p>
+                  <p className="text-sm sm:text-base font-bold dark:text-white">{formatCount(projectsCount)}</p>
                 </div>
               </div>
             </motion.div>
